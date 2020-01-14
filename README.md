@@ -2,13 +2,13 @@
 
 #### Description
 
-Extensions & utilities for Scala.
+Extensions & utilities for Scala 2.13.
 
 #### Installation
 
 1. Clone repository
 ```bash
-git clone https://github.com/xmaples/commons-util.git
+git clone -b s2.13 https://github.com/xmaples/commons-util.git
 #or git clone https://gitee.com/xmaples/commons-util.git
 ```
 
@@ -90,8 +90,6 @@ assert(Array(8,7,7,9,9).argmin == 1)
 assert(List(8,7,7,9,9).argmin == 1)
 assert(List(8,7,7,9,9).argmax == 3)
 assert(List.empty[Int].argmaxOption == None)
-assert(List.empty[Int].maxOption == None)
-assert(List.empty[String].maxByOption(_.length) == None)
 assert(List("bb","","ccc").argmaxBy(_.length)==2)
 assert(List("bb","","ccc").argminBy(_.length)==1)
 ```
