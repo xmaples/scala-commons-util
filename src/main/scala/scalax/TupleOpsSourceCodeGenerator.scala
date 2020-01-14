@@ -100,7 +100,7 @@ object TupleOpsSourceCodeGenerator {
              |  def length:Int = self.productArity
              |${plus2Group.map("  " + _).mkString("\n")}
              |${colon3Group.map("  " + _).mkString("\n")}
-             |}""".stripMargin.lines.filterNot(_.forall(_.isWhitespace)).map(ln => List.fill(margin)(" ").mkString + ln).mkString("\n")
+             |}""".stripMargin.linesIterator.filterNot(_.forall(_.isWhitespace)).map(ln => List.fill(margin)(" ").mkString + ln).mkString("\n")
 
         if (blankLine) cDef + "\n"
         else cDef
@@ -142,7 +142,7 @@ object TupleOpsSourceCodeGenerator {
           val cDef =
             s"""implicit class Tuple${n}OfTuple${subTupleNs.mkString("N")}Ops[${typeIComma(fN)}](private val self: ${tupleNFromSeq(tRanges)}) extends AnyVal {
                |  def flatten: ${tupleFromTo(fN)} = ${createTupleN(subTupleNs.zipWithIndex.flatMap(snI => (1 to snI._1).map(sj => s"self._${snI._2 + 1}._${sj}")))}
-               |}""".stripMargin.lines.map(ln => List.fill(margin)(" ").mkString + ln).mkString("\n")
+               |}""".stripMargin.linesIterator.map(ln => List.fill(margin)(" ").mkString + ln).mkString("\n")
 
           if (blankLine) cDef + "\n"
           else cDef
@@ -173,7 +173,7 @@ object TupleOpsSourceCodeGenerator {
              |  def reduce[B>:T](op:(B,B)=>B):B = reduceLeft(op)
              |  def reduceLeft[B>:T](op:(B,B)=>B):B = toIterator.reduceLeft(op)
              |  def reduceRight[B>:T](op:(B,B)=>B):B = toIterator.reduceRight(op)
-             |}""".stripMargin.lines.map(ln => List.fill(margin)(" ").mkString + ln).mkString("\n")
+             |}""".stripMargin.linesIterator.map(ln => List.fill(margin)(" ").mkString + ln).mkString("\n")
 
         if (blankLine) cDef + "\n"
         else cDef

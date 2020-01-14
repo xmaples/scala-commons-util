@@ -7,19 +7,8 @@ package scalax.collection
   */
 object CollectionOps {
 
-  implicit class MaxMinOptionOps[A](private val self: scala.collection.GenTraversableOnce[A]) extends AnyVal {
 
-    def maxByOption[B](f: A => B)(implicit ord: Ordering[B]): Option[A] = if (self.nonEmpty) Option(self.maxBy(f)(ord)) else None
-
-    def minByOption[B](f: A => B)(implicit ord: Ordering[B]): Option[A] = if (self.nonEmpty) Option(self.minBy(f)(ord)) else None
-
-    def maxOption[A1 >: A](implicit ord: Ordering[A1]): Option[A] = if (self.nonEmpty) Option(self.max(ord)) else None
-
-    def minOption[A1 >: A](implicit ord: Ordering[A1]): Option[A] = if (self.nonEmpty) Option(self.min(ord)) else None
-
-  }
-
-  implicit class SeqOps[A](private val self: scala.collection.GenSeq[A]) extends AnyVal {
+  implicit class SeqOps[A](private val self: scala.collection.Seq[A]) extends AnyVal {
 
     def argmax[A1 >: A](implicit ord: Ordering[A1]): Int = {
       if (self.isEmpty)

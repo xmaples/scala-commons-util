@@ -23,7 +23,7 @@ mvn install    # installing to local repository
 ```xml
 <dependency>
     <groupId>com.github.xmaples.commons</groupId>
-    <artifactId>commons-util_2.12</artifactId>
+    <artifactId>commons-util_2.13</artifactId>
     <version>LATEST</version>
 </dependency>
 ```
@@ -81,7 +81,7 @@ val b:Tuple5[Int,String,String,Int,Int] = a.flatten
 assert(b == (1,"x2","x3",4,5))
 ```
 
-4. **Seq/Array**. `argmax`, `argmin`, `argmaxOption`, `argminOption`, `argmaxBy`, `argminBy`, `argmaxByOption`, `argminByOption`, `maxOption`, `maxByOption`, `minOption`, `minByOption`.
+4. **Seq/Array**. `argmax`, `argmin`, `argmaxOption`, `argminOption`, `argmaxBy`, `argminBy`, `argmaxByOption`, `argminByOption`.
 
 ```scala
 import scalax.collection.CollectionOps._
