@@ -2,14 +2,14 @@
 
 #### Description
 
-Extensions & utilities for Scala.
+Extensions & utilities for Scala 2.12.
 
 #### Installation
 
 1. Clone repository
 ```bash
-git clone https://github.com/xmaples/commons-util.git
-#or git clone https://gitee.com/xmaples/commons-util.git
+git clone -b s2.12 https://github.com/xmaples/commons-util.git
+#or git clone -b s2.12 https://gitee.com/xmaples/commons-util.git
 ```
 
 2. Build & install to maven local(& private remote) repository
