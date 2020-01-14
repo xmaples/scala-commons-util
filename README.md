@@ -9,7 +9,7 @@ Extensions & utilities for Scala 2.13.
 1. Clone repository
 ```bash
 git clone -b s2.13 https://github.com/xmaples/commons-util.git
-#or git clone https://gitee.com/xmaples/commons-util.git
+#or git clone -b s2.13 https://gitee.com/xmaples/commons-util.git
 ```
 
 2. Build & install to maven local(& private remote) repository
@@ -71,7 +71,7 @@ assert(ht2i.sum == 10)
 assert(ht2i.reduce((v1,v2)=>v1*v2)==30)
 ```
 
-3. Flattening sub-tuples. `flatten`.
+3. **Tuples Flattening**. `flatten`.
 
 ```scala
 import scalax.TupleOps._
