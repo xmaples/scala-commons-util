@@ -15,8 +15,8 @@ git clone -b s2.12 https://github.com/xmaples/commons-util.git
 2. Build & install to maven local(& private remote) repository
 ```bash
 cd commons-util
-mvn install    # installing to local repository
-#mvn deploy     # installing to local & private remote repository if configured private remote repo
+mvn install    # building & installing to local repository
+#mvn deploy     # building & installing to local & private remote repository if configured private remote repo
 ```
 
 3. Add dependency into your `pom.xml`
@@ -71,7 +71,7 @@ assert(ht2i.sum == 10)
 assert(ht2i.reduce((v1,v2)=>v1*v2)==30)
 ```
 
-3. Flattening sub-tuples. `flatten`.
+3. **Tuples Flattening**. `flatten`.
 
 ```scala
 import scalax.TupleOps._
