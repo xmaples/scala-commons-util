@@ -8,13 +8,13 @@ Extensions & utilities for Scala 2.13.
 
 1. Clone repository
 ```bash
-git clone -b s2.13 https://github.com/xmaples/commons-util.git
-#or git clone -b s2.13 https://gitee.com/xmaples/commons-util.git
+git clone -b s2.13 https://github.com/duanlian-lab/scala-commons-util.git
+#or git clone -b s2.13 https://gitee.com/duanlian-lab/scala-commons-util.git
 ```
 
 2. Build & install to maven local(& private remote) repository
 ```bash
-cd commons-util
+cd scala-commons-util
 mvn install    # installing to local repository
 #mvn deploy     # installing to local & private remote repository if configured private remote repo
 ```
